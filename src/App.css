@@ -25,3 +25,28 @@ body{
     border-radius: 10px;
     padding-bottom: 32px;
 }
+
+h1{
+    margin: 32px 0;
+    color: #fff;
+    font-size: 24px;
+}
+
+.todo-form{
+    margin-bottom: 32px;
+}
+
+.complete{
+    text-decoration: line-through;
+    opacity: 0.4;
+}
+
+.todo-input{
+    padding: 14px 32px 14px 16px;
+    border-radius: 4px 0 0 4px;
+    border: 2px solid #5d0cff;
+    outline: none;
+    width: 320px;
+    background: transparent;
+    color: #fff;
+}
