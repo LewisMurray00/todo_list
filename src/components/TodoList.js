@@ -16,7 +16,7 @@ function TodoList() {
     return (
         <div>
             <h1>Enter your tasks!</h1>
-            <TodoForm />
+            <TodoForm onSubmit={addTodo} />
         </div>
     )
 }
