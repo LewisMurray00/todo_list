@@ -1,6 +1,8 @@
 import './App.css';
 import {useState, useEffect} from 'react';
 import TodoList from './components/TodoList';
+import app from './firebase';
+
 
 function App() {
 
