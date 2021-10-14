@@ -24,6 +24,7 @@ const clearErrors = () => {
 }
 
 const handleLogin = () => {
+  clearErrors();
   app
     .auth()
     .signInWithEmailAndPassword(email,password)
@@ -42,6 +43,7 @@ const handleLogin = () => {
 };
 
 const handleSignup = () => {
+  clearErrors();
   app
   .auth()
   .createUserWithEmailAndPassword(email, password)
@@ -65,6 +67,7 @@ const handleLogout = () => {
 const authListener = () => {
   app.auth().onAuthStateChanged(user =>{
     if(user){
+      clearInputs();
       setUser(user)
     } else {
       setUser("")
