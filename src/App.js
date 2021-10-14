@@ -52,6 +52,19 @@ const handleLogout = () => {
   app.auth().signOut();
 }
 
+const authListener = () => {
+  app.auth().onAuthStateChanged(user =>{
+    if(user){
+      setUser(user)
+    } else {
+      setUser("")
+    }
+  });
+};
+
+useEffect(()=>{
+  authListener();
+}, []);
 
   return (
     <div className="todo-app">
