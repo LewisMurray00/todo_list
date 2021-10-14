@@ -48,6 +48,11 @@ const handleSignup = () => {
   });
 }
 
+const handleLogout = () => {
+  app.auth().signOut();
+}
+
+
   return (
     <div className="todo-app">
      <TodoList />
