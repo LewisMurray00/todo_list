@@ -2,7 +2,7 @@ import './App.css';
 import {useState, useEffect} from 'react';
 import TodoList from './components/TodoList';
 import app from './firebase';
-
+import Login from './components/Login';
 
 function App() {
 
@@ -80,9 +80,25 @@ useEffect(()=>{
 }, []);
 
   return (
-    <div className="todo-app">
-     <TodoList />
+    <>
+    <div className="app">
+      <Login 
+      email={email} 
+      setEmail={setEmail} 
+      password={password} 
+      setPassword={setPassword} 
+      handleLogin={handleLogin}
+      handleSignup={handleSignup}
+      hasAccount={hasAccount}
+      setHasAccount={setHasAccount}
+      emailError={emailError}
+      passwordError={passwordError}  
+      />
     </div>
+    <div className="todo-app">
+     {/*<TodoList />*/}
+    </div>
+    </>
   );
 }
 
